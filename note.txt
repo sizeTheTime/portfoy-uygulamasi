@@ -1,0 +1,12 @@
+            @foreach ($categories as $category)
+                <x-category-section :category="$category" />
+                {{-- Kategoriye ait ürünler --}}
+                @if ($category->products && count($category->products))
+                    <x-product-grid :products="$category->products" :default-image="isset($categories[0]->products[0]->cardImage->main_image)
+                        ? asset('storage/' . $categories[0]->products[0]->cardImage->main_image)
+                        : ''" />
+                @endif
+            @endforeach
+
+
+            <!--Genel Card Sistemi -->
