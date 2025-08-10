@@ -159,7 +159,7 @@ const breadcrumbs: BreadcrumbItem[] = [
                     description="Kategori bilgilerini doldurun ve yeni kategori oluşturun. Tüm alanlar SEO optimizasyonu için önemlidir."
                 />
                 <!-- Form -->
-                <form @submit.prevent="submit" class="rounded-2xl p-8">
+                <form @submit.prevent="submit" class="rounded-2xl p-1 md:p-8">
                     <FormGrid>
                         <ColSpan>
                             <SectionBox>
