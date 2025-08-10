@@ -1,0 +1,1 @@
+import{d as o,a as r,o as n,D as t,q as c}from"./app-ehJPZJvz.js";const d=o({__name:"SectionBox",props:{class:{}},setup(s){const e=s;return(a,l)=>(n(),r("div",{class:t(["space-y-4 rounded-2xl bg-white p-6 shadow-md dark:bg-gray-900",e.class])},[c(a.$slots,"default")],2))}});export{d as _};
