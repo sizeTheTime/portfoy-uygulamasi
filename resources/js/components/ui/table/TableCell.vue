@@ -17,7 +17,7 @@ const alignmentClass = {
 <template>
   <td
     :class="cn(
-      'p-4 align-middle text-gray-900 dark:text-gray-100 max-w-sm',
+      'p-4 align-middle text-gray-900 dark:text-gray-100 max-w-sm whitespace-nowrap',
       alignmentClass[align || 'left'],
       props.class
     )"
