@@ -95,7 +95,7 @@ function confirmDelete() {
 
     <AppLayout :breadcrumbs="breadcrumbs">
         <PageContainer>
-            <div class="max-w-8xl mx-auto mt-16  rounded-xl bg-white p-8 dark:bg-gray-900">
+            <div class="max-w-8xl mx-auto mt-16 overflow-x-hidden rounded-xl bg-white p-8 dark:bg-gray-900">
                 <div class="mb-6 flex justify-end">
                     <Link
                         href="/dashboard/categories/create"
