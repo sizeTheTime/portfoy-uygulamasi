@@ -94,7 +94,7 @@ function confirmDelete() {
             <div class="mx-auto max-w-4xl">
                 <AlertMessage :message="message" :type="messageType" />
 
-                <form @submit.prevent="submit" class="rounded-2xl p-8 dark:bg-gray-800">
+                <form @submit.prevent="submit" class="rounded-2xl p-1 md:p-8 dark:bg-gray-800">
                     <FormGrid>
                         <ColSpan :span="'col-span-5 space-y-6'">
                             <SectionBox>
