@@ -22,7 +22,7 @@ const emit = defineEmits<{
 
 const addImage = () => {
   const newImages = [...props.modelValue]
-  newImages.push({
+  newImages.unshift({
     main_image: null,
     main_image_alt: '',
     hover_image: null,
