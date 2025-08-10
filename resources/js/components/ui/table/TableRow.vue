@@ -22,7 +22,7 @@ const handleClick = (event: MouseEvent) => {
 <template>
   <tr
     :class="cn(
-      'border-b border-gray-200 dark:border-gray-700 transition-colors max-w-sm',
+      'border-b border-gray-200 dark:border-gray-700 transition-colors max-w-lg',
       {
         'hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer': clickable,
         'bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800': selected,
