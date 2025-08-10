@@ -277,10 +277,10 @@ const updateImages = (newImages: ProductImage[]) => {
 <template>
     <Head title="Ürün Oluştur" />
     <AppLayout :breadcrumbs="breadcrumbs">
-        <div class="max-w-8xl mx-auto p-8">
+        <div class="max-w-8xl mx-auto p-1 md:p-8">
             <PageContainer>
-                <div class="p-8">
-                    <form @submit.prevent="submit" class="space-y-8">
+                <div class="p-1 md:p-8">
+                    <form @submit.prevent="submit" class="space-y-2 md:space-y-8">
                         <FormGrid>
                             <!-- Sol Kolon - Ana Bilgiler -->
                             <ColSpan>

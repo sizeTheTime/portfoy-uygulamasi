@@ -70,8 +70,8 @@ const breadcrumbs: BreadcrumbItem[] = [
     <Head title="Sayfalar" />
     <AppLayout :breadcrumbs="breadcrumbs">
         <PageContainer>
-            <div class="mx-auto max-w-6xl p-8">
-            <div class="flex items-center justify-between">
+            <div class="mx-auto max-w-6xl p-2 md:p-8">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between">
                 <SectionHeader
                     :icon="Info"
                     title="Ürün Sayfaları"
@@ -87,7 +87,7 @@ const breadcrumbs: BreadcrumbItem[] = [
             </div>
 
                 <!-- Products Grid -->
-                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+                <div class="grid grid-cols-1 gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
                     <div
                         v-for="product in products"
                         :key="product.id"
