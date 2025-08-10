@@ -115,8 +115,8 @@ const getImageUrl = (path: string | null): string | null => {
 <template>
   <div class="space-y-3 md:space-y-6">
     <!-- Header -->
-    <div class="flex items-center justify-between">
-      <div class="flex flex-col md:flex-row items-center gap-1 md:gap-3">
+    <div class="flex flex-col md:flex-row  items-center justify-between">
+      <div class="flex items-center gap-1 md:gap-3">
         <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900/30">
           <ImageIcon class="h-5 w-5 text-blue-600 dark:text-blue-400" />
         </div>
