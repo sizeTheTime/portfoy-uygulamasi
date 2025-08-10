@@ -9,9 +9,7 @@ import {
     MultiSelectBox,
     ProductAttributeSection,
 } from '@/components/ui/input';
-
 import SelectBox from '@/components/ui/input/SelectBox.vue'
-
 import { PageContainer } from '@/components/ui/layout';
 import { SectionBox, SectionHeader } from '@/components/ui/section';
 import AppLayout from '@/layouts/AppLayout.vue';
@@ -267,11 +265,10 @@ const hasValidationErrors = computed<boolean>(() => Object.keys(form.errors).len
 
 // Images array'ini güncellemek için özel fonksiyon
 const updateImages = (newImages: ProductImage[]) => {
-    // Inertia form'da reactive güncellemeler için doğru yöntem
-    form.images = [...newImages];
+    // Yeni resimleri listenin başına ekle
+    form.images = [...newImages, ...form.images];
     console.log('Images updated:', form.images);
 };
-
 </script>
 
 <template>
@@ -282,10 +279,15 @@ const updateImages = (newImages: ProductImage[]) => {
                 <div class="p-1 md:p-8">
                     <form @submit.prevent="submit" class="space-y-2 md:space-y-8">
                         <FormGrid>
-                            <!-- Sol Kolon - Ana Bilgiler -->
+                            <!-- Sol Kolon -->
                             <ColSpan>
+                                <!-- Ana Bilgiler -->
                                 <SectionBox>
-                                    <SectionHeader :icon="Info" title="Ürün Bilgileri" description="Ürün hakkında temel özelliklerini belirleyin" />
+                                    <SectionHeader
+                                        :icon="Info"
+                                        title="Ürün Bilgileri"
+                                        description="Ürün hakkında temel özelliklerini belirleyin"
+                                    />
 
                                     <!-- Ürün Adı -->
                                     <FormField
@@ -369,9 +371,13 @@ const updateImages = (newImages: ProductImage[]) => {
                                     />
                                 </SectionBox>
 
-                                <!-- Ürün Resimleri - DOĞRU BAĞLAMA -->
+                                <!-- Ürün Resimleri - BAŞA GETİRİLDİ -->
                                 <SectionBox>
-                                    <ImageGallerySection :model-value="form.images" :errors="form.errors" @update:model-value="updateImages" />
+                                    <ImageGallerySection
+                                        :model-value="form.images"
+                                        :errors="form.errors"
+                                        @update:model-value="updateImages"
+                                    />
                                 </SectionBox>
 
                                 <!-- Özellikler -->
@@ -450,7 +456,10 @@ const updateImages = (newImages: ProductImage[]) => {
 
                                 <!-- SEO Alanları -->
                                 <SectionBox>
-                                    <SectionHeader title="SEO Bilgileri" description="Arama motorları için meta bilgilerini girin" />
+                                    <SectionHeader
+                                        title="SEO Bilgileri"
+                                        description="Arama motorları için meta bilgilerini girin"
+                                    />
 
                                     <FormField
                                         id="meta_title"
@@ -495,12 +504,13 @@ const updateImages = (newImages: ProductImage[]) => {
                             </ColSpan>
                         </FormGrid>
 
-
-                        <FormActions :processing="isFormProcessing" @cancel="$inertia.visit('/dashboard/products')" />
+                        <FormActions
+                            :processing="isFormProcessing"
+                            @cancel="$inertia.visit('/dashboard/products')"
+                        />
                     </form>
                 </div>
             </PageContainer>
         </div>
-
     </AppLayout>
 </template>
