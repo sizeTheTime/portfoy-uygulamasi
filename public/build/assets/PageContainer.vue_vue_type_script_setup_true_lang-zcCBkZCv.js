@@ -1,1 +1,0 @@
-import{d as s,a as o,o as n,D as t,q as c}from"./app-BISnIWwT.js";const i=s({__name:"PageContainer",props:{class:{}},setup(e){const a=e;return(r,l)=>(n(),o("div",{class:t(["min-h-screen bg-gradient-to-br from-cyan-50 via-blue-100 to-green-100 px-4 py-8 dark:from-gray-950 dark:via-blue-900/30 dark:to-green-900/30",a.class])},[c(r.$slots,"default")],2))}});export{i as _};

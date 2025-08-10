@@ -74,7 +74,7 @@ const filledAttributesCount = computed(() =>
 <template>
   <div class="space-y-6">
     <!-- Header with Stats -->
-    <div class="flex items-center justify-between">
+    <div class="flex flex-col md:flex-row  items-center justify-between">
       <div class="flex items-center gap-4">
         <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 shadow-lg">
           <Settings class="h-6 w-6 text-white" />
@@ -89,7 +89,7 @@ const filledAttributesCount = computed(() =>
 
       <!-- Stats Badge -->
       <div class="flex items-center gap-3">
-        <div class="rounded-lg bg-gray-100 px-3 py-1.5 dark:bg-gray-800">
+        <div class="hidden md:block rounded-lg bg-gray-100 px-3 py-1.5 dark:bg-gray-800">
           <span class="text-sm font-medium text-gray-600 dark:text-gray-300">
             {{ filledAttributesCount }}/{{ attributeCount }} tamamlandı
           </span>
